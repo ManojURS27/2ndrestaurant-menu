@@ -1,6 +1,5 @@
 import streamlit as st
 
-# --- MENU DATA ---
 menu_data = {
     "Starters": {"Gobi Manchurian": 130.0, "Mushroom Manchurian": 150.0, "Paneer Manchurian": 150.0, "Baby Corn Manchurian": 140.0},
     "Soups": {"Hot and Sour": 200.0, "Manchow Soup": 150.0, "Garlic Soup": 180.0, "Tomato Soup": 150.0},
@@ -11,8 +10,8 @@ menu_data = {
 if 'cart' not in st.session_state:
     st.session_state.cart = {}
 
-st.set_page_config(page_title="Digital Restaurant", layout="wide")
-st.title("🍴 Gourmet Restaurant Menu")
+st.set_page_config(page_title="Manu Restaurant", layout="wide")
+st.title("🍴 Manu Restaurant Menu")
 
 col1, col2 = st.columns([2, 1])
 
@@ -49,4 +48,5 @@ with col2:
         
         if st.button("Clear Cart"):
             st.session_state.cart = {}
+
             st.rerun()
